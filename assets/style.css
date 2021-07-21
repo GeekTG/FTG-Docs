@@ -1,0 +1,39 @@
+body {
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mobile .lst {
+    display: none;
+}
+.content {
+    margin: 1em;
+}
+.article {
+    border-radius: 0.4em;
+    padding: 1em;
+}
+p {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    margin-left: 0.5em;
+}
+pre {
+    border-width: 1px;
+    border-radius: 0.2em;
+    padding: 1em;
+    border-style: solid;
+    padding: 3px;
+    margin: 5px;
+}
+pre::-webkit-scrollbar {
+    height: 6px;               /* ширина scrollbar */
+}
+pre::-webkit-scrollbar-track {
+    background: transparent;        /* цвет дорожки */
+}
+pre::-webkit-scrollbar-thumb {
+    background-color: rgb(78, 49, 105);    /* цвет плашки */
+}
+.list-group {
+    border-radius: 0.4em;
+}
