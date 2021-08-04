@@ -2,156 +2,156 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeekTg FTG Mod</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
-    <link rel="stylesheet" href="/assets/style.css">
-    <link id="theme" rel="stylesheet" href="/assets/dark-theme.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GeekTg FTG Mod</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
+	<link rel="stylesheet" href="/assets/style.css">
+	<link id="theme" rel="stylesheet" href="/assets/dark-theme.css">
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">GeekTG FTG Mod</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#installation">Installation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#autostart">Autostart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/github">GitHub</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/modules">Modules</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="theme-btn" href="#">Switch theme</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-4 col-md-3 col-lg-3 col-xl-3 lst">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a href="#installation">Installation</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#autostart">Autostart</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/github">GitHub</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/modules">Modules</a>
-                        </li>
-                    </ul>
-                    <br>
-                </div>
-                <div class="col-sm-8 col-md-9 col-lg-9 col-xl-9">
-                    <div class="article">
-                        <h3 style="text-align: center; font-weight: bold;">Welcome to the GeekTG FTG Mod documentation
-                        </h3>
-                        <hr>
-                        <div id="installation">
-                            <h4>• Installation</h4>
-                            <br>
-                            <h5>Automated installation</h5>
-                            <br>
-                            <h6>Linux / Termux</h6>
-                            <pre>(. <($(which curl>/dev/null&&echo curl -Ls||echo wget -qO-) https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.sh))</pre>
-                            <br>
-                            <h6>Windows</h6>
-                            <pre>iex (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.ps1")</pre>
-                            <br>
-                            <h6>Heroku Windows</h6>
-                            <pre>iex (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install-heroku.ps1")</pre>
-                            <br>
-                            <h6>Mac</h6>
-                            <pre>$(which curl>/dev/null&&echo curl -LsO||echo wget -q) https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.sh&&(. install.sh --no-web);rm install.sh</pre>
-                            <br>
-                            <hr>
-                            <br>
-                            <h5>Heroku installation</h5>
-                            <br>
-                            <p>
-                                You can directly click
-                                <a
-                                    href="https://www.heroku.com/deploy/?template=https://github.com/GeekTG/Friendly-Telegram"><img
-                                        src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
-                                to deploy to Heroku. Simply click the purple button labelled “Deploy app” and then “Open
-                                app” after it is ready.
-                            </p>
-                            <h6>Script</h6>
-                            <pre>(. <($(which curl>/dev/null&&echo curl -Ls||echo wget -qO-) https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.sh) --heroku)</pre>
-                            <br>
-                            <hr>
-                            <br>
-                            <h5>Manual installation</h5>
-                            <h6>Debian-like linux:</h6>
-                            <p>Updating and installing requeired packages</p>
-                            <pre>sudo apt update -y && sudo apt upgrade -y && sudo apt install python3 python3-pip git python3-dev libwebp-dev libz-dev libjpeg-dev libopenjp2-7 libtiff5 ffmpeg imagemagick libffi-dev libcairo2 neofetch dialog -y</pre>
-                            <p>Clone the source code</p>
-                            <pre>cd && git clone https://github.com/GeekTG/Friendly-Telegram && cd Friendly-Telegram</pre>
-                            <p>Instal requirements</p>
-                            <pre>python3 -m pip install -r requirements.txt</pre>
-                            <p>Launch bot</p>
-                            <pre>cd ~/Friendly-Telegram && python3 -m friendly-telegram</pre>
-                            <br>
-                            <h5>Termux</h5>
-                            <pre>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="#">GeekTG FTG Mod</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+	        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#installation">Installation</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#autostart">Autostart</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/github">GitHub</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/modules">Modules</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="theme-btn" href="#">Switch theme</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4 col-md-3 col-lg-3 col-xl-3 lst">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<a href="#installation">Installation</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#autostart">Autostart</a>
+					</li>
+					<li class="list-group-item">
+						<a href="/github">GitHub</a>
+					</li>
+					<li class="list-group-item">
+						<a href="/modules">Modules</a>
+					</li>
+				</ul>
+				<br>
+			</div>
+			<div class="col-sm-8 col-md-9 col-lg-9 col-xl-9">
+				<div class="article">
+					<h3 style="text-align: center; font-weight: bold;">Welcome to the GeekTG FTG Mod documentation
+					</h3>
+					<hr>
+					<div id="installation">
+						<h4>• Installation</h4>
+						<br>
+						<h5>Automated installation</h5>
+						<br>
+						<h6>Linux / Termux</h6>
+						<pre>(. <($(which curl>/dev/null&&echo curl -Ls||echo wget -qO-) https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.sh))</pre>
+						<br>
+						<h6>Windows</h6>
+						<pre>iex (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.ps1")</pre>
+						<br>
+						<h6>Heroku Windows</h6>
+						<pre>iex (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install-heroku.ps1")</pre>
+						<br>
+						<h6>Mac</h6>
+						<pre>$(which curl>/dev/null&&echo curl -LsO||echo wget -q) https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.sh&&(. install.sh --no-web);rm install.sh</pre>
+						<br>
+						<hr>
+						<br>
+						<h5>Heroku installation</h5>
+						<br>
+						<p>
+							You can directly click
+							<a
+									href="https://www.heroku.com/deploy/?template=https://github.com/GeekTG/Friendly-Telegram"><img
+									src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+							to deploy to Heroku. Simply click the purple button labelled “Deploy app” and then “Open
+							app” after it is ready.
+						</p>
+						<h6>Script</h6>
+						<pre>(. <($(which curl>/dev/null&&echo curl -Ls||echo wget -qO-) https://raw.githubusercontent.com/GeekTG/Friendly-Telegram/master/install.sh) --heroku)</pre>
+						<br>
+						<hr>
+						<br>
+						<h5>Manual installation</h5>
+						<h6>Debian-like linux:</h6>
+						<p>Updating and installing requeired packages</p>
+						<pre>sudo apt update -y && sudo apt upgrade -y && sudo apt install python3 python3-pip git python3-dev libwebp-dev libz-dev libjpeg-dev libopenjp2-7 libtiff5 ffmpeg imagemagick libffi-dev libcairo2 neofetch dialog -y</pre>
+						<p>Clone the source code</p>
+						<pre>cd && git clone https://github.com/GeekTG/Friendly-Telegram && cd Friendly-Telegram</pre>
+						<p>Instal requirements</p>
+						<pre>python3 -m pip install -r requirements.txt</pre>
+						<p>Launch bot</p>
+						<pre>cd ~/Friendly-Telegram && python3 -m friendly-telegram</pre>
+						<br>
+						<h5>Termux</h5>
+						<pre>
 pkg install git ffmpeg imagemagick python libjpeg-turbo zlib libwebp libffi libcairo build-essential dialog neofetch -y
 git clone https://github.com/GeekTG/Friendly-Telegram
 cd Friendly-Telegram
 pip install -r requirements.txt
 python -m friendly-telegram</pre>
-                            <hr>
-                            <h5>Docker installation</h5>
-                            <p>Login as root</p>
-                            <pre>sudo su</pre>
-                            <p>Install docker</p>
-                            <pre>apt update && apt install -y curl && curl -Ls https://get.docker.com/ | bash</pre>
-                            <p>Pull image</p>
-                            <pre>docker pull geektg/friendly-telegram</pre>
-                            <p>Run</p>
-                            <pre>docker run --restart unless-stopped --name ftg_on_42069 -d -p 42069:8080 --memory="1024m" --cpus="0.9" --pids-limit 100 geektg/friendly-telegram</pre>
-                            <p>
-                                --memory="1024m" - This is the maximum memory consumption. <br>
-                                --cpus="0.9" - This is the maximum memory consumption. <br>
-                                -p 42069:8080 - Which port to run FTG, 42069 output port, it can be changed. 8080 should
-                                not be changed <br>
-                                --pids-limit 100 - Maximum number of processes, forbbing protection <br>
-                                --name ftg_on_42069 - The name of the container, you can set any name
-                            </p>
-                            <br>
-                            <hr>
-                        </div>
-                        <div id="autostart">
-                            <h4>• Userbot autostart</h4>
-                            <br>
-                            <h5>Autostart as a system service (Linux)</h5>
-                            <p>Grant superuser rights</p>
-                            <pre>sudo su</pre>
-                            <p>Create ftg.service file in /etc/systemd/system/</p>
-                            <pre>
-[Unit]
-echo "Description=FTG
+						<hr>
+						<h5>Docker installation</h5>
+						<p>Login as root</p>
+						<pre>sudo su</pre>
+						<p>Install docker</p>
+						<pre>apt update && apt install -y curl && curl -Ls https://get.docker.com/ | bash</pre>
+						<p>Pull image</p>
+						<pre>docker pull geektg/friendly-telegram</pre>
+						<p>Run</p>
+						<pre>docker run --restart unless-stopped --name ftg_on_42069 -d -p 42069:8080 --memory="1024m" --cpus="0.9" --pids-limit 100 geektg/friendly-telegram</pre>
+						<p>
+							--memory="1024m" - This is the maximum memory consumption. <br>
+							--cpus="0.9" - This is the maximum memory consumption. <br>
+							-p 42069:8080 - Which port to run FTG, 42069 output port, it can be changed. 8080 should
+							not be changed <br>
+							--pids-limit 100 - Maximum number of processes, forbbing protection <br>
+							--name ftg_on_42069 - The name of the container, you can set any name
+						</p>
+						<br>
+						<hr>
+					</div>
+					<div id="autostart">
+						<h4>• Userbot autostart</h4>
+						<br>
+						<h5>Autostart as a system service (Linux)</h5>
+						<p>Grant superuser rights</p>
+						<pre>sudo su</pre>
+						<p>Create ftg.service file in /etc/systemd/system/</p>
+						<pre>
+echo "[Unit]
+Description=FTG
 [Service]
 WorkingDirectory=/home/ubuntu/Friendly-Telegram
 ExecStart=/usr/bin/python3 -m friendly-telegram
@@ -161,56 +161,57 @@ RestartSec=1
 User=ubuntu
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/ftg.service</pre>
-                            <p>"/home/ubuntu/Friendly-Telegram" - Path to your FTG</p>
-                            <p>"ubuntu" - The user under which the FTG will be launched</p>
-                            <p>Enable service autostart</p>
-                            <pre>sudo systemctl enable ftg.service</pre>
-                            <p>Start FTG</p>
-                            <pre>sudo service ftg start</pre>
-                            <p>Stop FTG</p>
-                            <pre>sudo service ftg stop</pre>
-                            <p>Restart FTG</p>
-                            <pre>sudo service ftg restart</pre>
-                            <p>Show FTG status</p>
-                            <pre>sudo service ftg status</pre>
-                            <br>
-                            <hr>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        function update_theme() {
-            if (localStorage.light_theme == "true") {
-                $('#theme').attr('href', '/assets/light-theme.css');
-                $('nav').removeClass('bg-dark');
-                $('nav').removeClass('navbar-dark');
-                $('nav').addClass('navbar-light');
-                $('nav').addClass('bg-light');
-            } else if (localStorage.light_theme == "false") {
-                $('#theme').attr('href', '/assets/dark-theme.css');
-                $('nav').addClass('bg-dark');
-                $('nav').addClass('navbar-dark');
-                $('nav').removeClass('navbar-light');
-                $('nav').removeClass('bg-light');
-            }
-        }
-        update_theme();
-        $(document).ready(() => {
-            $('#theme-btn').click(
-                () => {
-                    if (localStorage.light_theme == "true") {
-                        localStorage.light_theme = "false";
-                    } else if (localStorage.light_theme == "false") {
-                        localStorage.light_theme = "true";
-                    }
-                    update_theme();
-                }
-            );
-        })
-    </script>
+						<p>"/home/ubuntu/Friendly-Telegram" - Path to your FTG</p>
+						<p>"ubuntu" - The user under which the FTG will be launched</p>
+						<p>Enable service autostart</p>
+						<pre>sudo systemctl enable ftg.service</pre>
+						<p>Start FTG</p>
+						<pre>sudo service ftg start</pre>
+						<p>Stop FTG</p>
+						<pre>sudo service ftg stop</pre>
+						<p>Restart FTG</p>
+						<pre>sudo service ftg restart</pre>
+						<p>Show FTG status</p>
+						<pre>sudo service ftg status</pre>
+						<br>
+						<hr>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function update_theme() {
+		if (localStorage.light_theme == "true") {
+			$('#theme').attr('href', '/assets/light-theme.css');
+			$('nav').removeClass('bg-dark');
+			$('nav').removeClass('navbar-dark');
+			$('nav').addClass('navbar-light');
+			$('nav').addClass('bg-light');
+		} else if (localStorage.light_theme == "false") {
+			$('#theme').attr('href', '/assets/dark-theme.css');
+			$('nav').addClass('bg-dark');
+			$('nav').addClass('navbar-dark');
+			$('nav').removeClass('navbar-light');
+			$('nav').removeClass('bg-light');
+		}
+	}
+
+	update_theme();
+	$(document).ready(() => {
+		$('#theme-btn').click(
+			() => {
+				if (localStorage.light_theme == "true") {
+					localStorage.light_theme = "false";
+				} else if (localStorage.light_theme == "false") {
+					localStorage.light_theme = "true";
+				}
+				update_theme();
+			}
+		);
+	})
+</script>
 </body>
 
 </html>
